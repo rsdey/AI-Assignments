@@ -39,9 +39,9 @@ int main()
 	}
 
 
-	cout << "\n\n Optimum Path: \t ";
+	cout << "\n\n Optimum Path is: \t ";
 	minCost(0);
-	cout << "\n Minimum Cost: \t";
+	cout << "\n Minimum Cost is: \t";
 	cout << cost<<"\n";
 
 	system("pause");
@@ -73,7 +73,7 @@ int tsp(int city1)
 	int counter;
 	int nearestCity = 999;
 	int mini = 999;
-	int temp;
+	int itemp;
 
 	for (counter = 0; counter < numCity; counter++)
 	{
@@ -83,12 +83,12 @@ int tsp(int city1)
 			{
 				mini = costMatrix[counter][0] + costMatrix[city1][counter];
 			}
-			temp = costMatrix[city1][counter];
+			itemp = costMatrix[city1][counter];
 			nearestCity = counter;
 		}
 	}
 	if (mini != 999)
-		cost = cost + temp;
+		cost = cost + itemp;
 
 	return nearestCity;
 }
